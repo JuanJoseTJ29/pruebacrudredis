@@ -13,6 +13,14 @@ import { router as locationRouter } from './routers/location-router.js' */
 const app = express()
 app.use(express.json())
 
+
+app.get('/', (req, res) => {
+    //Respuesta a la peticion
+    res.status(200).json({
+      gawr: 'Hola mi HOME'
+    })
+  })
+
 /* bring in some routers */
 /* app.use('/person', personRouter, locationRouter)
 app.use('/persons', searchRouter) */
